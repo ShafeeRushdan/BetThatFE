@@ -4,10 +4,15 @@ import { NavLink } from "react-router-dom"
 function Home() {
 
     return (
-        <div>
-  
-
+        <div class="flex-grid-center">
+        <div class="pure-button arcade-button blue">
+           
+           <NavLink class="pure-button arcade-button blue" to="/login">
+           BET THAT
+        </NavLink>
         </div>
+          
+      </div>
 
     );
 
