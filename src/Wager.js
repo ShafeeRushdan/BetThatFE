@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"
-function Event (props) {
+function Wager (props) {
 
-    const [name, setName] = useState("");
+    const [amount, setAmount] = useState("");
     const handleSubmit = (e) => {
-        localStorage.setItem("currentUser", name)
+       
         // add localStorage.clear() to log out function 
-     props.handleNewEvent(name)
+     props.handleNewWager(amount)
 
     }
     const handleOnChangeN = (e) => {
-    setName(e.target.value)
+    setAmount(e.target.value)
     }
 
     return (
@@ -18,13 +18,13 @@ function Event (props) {
 
         <div class="card">
         <form onSubmit={(e) => { handleSubmit(e) }}>
-            <h2>Create a new event</h2>
+            <h2>Make a wager</h2>
             <label>
-               <h2> Event name </h2>
+               <h2> Wager amount </h2>
         <ul></ul>
                 <input
                     type="text"
-                    value={name}
+                    value={amount}
                     onChange={(e) => { handleOnChangeN(e) }}
                     />
             </label>
@@ -33,15 +33,15 @@ function Event (props) {
             
         </form>
                     </div>
-                    <h1>{name}</h1>
-                    <NavLink class="arcade-buttonnospace" to="/wager" type="submit"> Submit</NavLink>
+                    <h1>{amount}</h1>
+                    <NavLink class="arcade-buttonnospace" to="/" type="submit"> Submit</NavLink>
                     
                     </div>
 
     );
 }
 
-export default Event;
+export default Wager;
 
 
 

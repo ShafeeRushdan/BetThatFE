@@ -34,16 +34,14 @@ function Login (props) {
             </label>
             <ul></ul>
 
-            <button class="arcade-buttonnospace" type="submit"> Submit</button>
+           
         </form>
 
       
         <ul></ul>
                     </div>
                     <h1>{name}</h1>
-                    <NavLink class="pure-button arcade-button blue" to="/event">
-          Bet 
-        </NavLink>
+                    <NavLink class="arcade-buttonnospace" to="/event" type="submit"> Submit</NavLink>
                     </div>
 
     );
